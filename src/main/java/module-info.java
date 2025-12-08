@@ -3,6 +3,7 @@ module com.example.rapid_courier {
     requires javafx.fxml;
     requires javafx.web;
 
+
     requires org.controlsfx.controls;
     requires com.dlsc.formsfx;
     requires net.synedra.validatorfx;
@@ -13,4 +14,5 @@ module com.example.rapid_courier {
 
     opens com.example.rapid_courier to javafx.fxml;
     exports com.example.rapid_courier;
+
 }
