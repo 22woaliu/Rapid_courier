@@ -18,7 +18,7 @@
     
     <!-- Back Button -->
     <HBox alignment="CENTER_LEFT">
-        <Button onAction="#onBackButtonClick" style="-fx-background-color: transparent; -fx-text-fill: #546E7A; -fx-cursor: hand; -fx-border-color: transparent;" text="Back">
+        <Button onAction="#onBackButtonClick" style="-fx-background-color: #4365eb;" text="Back" textFill="#f5f5f5">
             <font>
                 <Font size="14.0" />
             </font>
@@ -26,7 +26,7 @@
     </HBox>
     
     <!-- Main Content Card -->
-    <VBox alignment="TOP_CENTER" spacing="25.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);">
+    <VBox alignment="TOP_CENTER" spacing="25.0" style="-fx-background-color: #FFFFFF;">
         <padding>
             <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
         </padding>
@@ -57,8 +57,8 @@
                     <Font size="13.0" />
                 </font>
             </Label>
-            <HBox alignment="CENTER_LEFT" prefHeight="45.0" spacing="10.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #D0D0D0; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 12;">
-                <TextField fx:id="usernameField" prefWidth="280.0" promptText="Enter username" style="-fx-background-color: transparent; -fx-border-color: transparent; -fx-text-fill: #2C3E50; -fx-prompt-text-fill: #B0B0B0;">
+            <HBox alignment="CENTER_LEFT" prefHeight="45.0" spacing="10.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #000000;">
+                <TextField fx:id="usernameField" prefHeight="32.0" prefWidth="340.0" promptText="Enter username" style="-fx-background-color: #ffffff;">
                     <font>
                         <Font size="14.0" />
                     </font>
@@ -73,15 +73,15 @@
                     <Font size="13.0" />
                 </font>
             </Label>
-            <HBox alignment="CENTER_LEFT" prefHeight="45.0" spacing="10.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #D0D0D0; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 12;">
-                <PasswordField fx:id="passwordField" prefWidth="280.0" promptText="Enter password" style="-fx-background-color: transparent; -fx-border-color: transparent; -fx-text-fill: #2C3E50; -fx-prompt-text-fill: #B0B0B0;">
+            <HBox alignment="CENTER_LEFT" prefHeight="45.0" spacing="10.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #000000;">
+                <PasswordField fx:id="passwordField" prefHeight="32.0" prefWidth="422.0" promptText="Enter password" style="-fx-background-color: #ffffff;">
                     <font>
                         <Font size="14.0" />
                     </font>
                 </PasswordField>
             </HBox>
         </VBox>
-      <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="412.0" style="-fx-background-color: #4365eb; -fx-text-alignment: #fffffff;" text="Login" textFill="WHITE">
+      <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="412.0" style="-fx-background-color: #4365eb;" text="Login" textFill="WHITE">
          <font>
             <Font size="14.0" />
          </font>
@@ -89,7 +89,7 @@
         
         <!-- Demo Credentials -->
         <VBox spacing="5.0" style="-fx-background-color: #F9F9F9;">
-            <Label text="Demo credentials:" textFill="#546E7A">
+            <Label text="Demo:" textFill="#546E7A">
                 <font>
                     <Font size="11.0" />
                 </font>
