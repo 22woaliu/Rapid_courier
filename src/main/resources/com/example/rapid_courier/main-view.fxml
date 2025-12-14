@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="600.0" prefWidth="800.0" spacing="40.0" style="-fx-background-color: #E8EAF6;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/25" fx:controller="com.example.rapid_courier.MainController">
+    <padding>
+        <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+    </padding>
+
+    <!-- Title Section -->
+    <VBox alignment="CENTER" spacing="10.0">
+        <Label style="-fx-font-size: 36px; -fx-font-weight: bold; -fx-text-fill: #37474F;" text="Rapid Courier" />
+        <Label style="-fx-font-size: 18px; -fx-font-style: italic; -fx-text-fill: #546E7A;" text="Simple &amp; Fast Delivery" />
+    </VBox>
+
+    <!-- Login Options Container -->
+    <HBox alignment="CENTER" spacing="60.0">
+        <!-- Admin Login Card -->
+        <VBox alignment="CENTER" prefHeight="300.0" prefWidth="280.0" spacing="20.0" style="-fx-background-color: white;">
+            <padding>
+                <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+            </padding>
+            
+            <!-- Admin Icon Circle -->
+            <Circle fill="#BBDEFB" radius="50.0" />
+            
+            <Button onAction="#onAdminLoginClick" prefHeight="35.0" prefWidth="160.0" text="Admin Login">
+            <font>
+               <Font name="System Bold" size="14.0" />
+            </font></Button>
+            
+            <Label style="-fx-font-size: 12px; -fx-text-fill: #546E7A;" text="Manage users, orders, and system&#10;settings" textAlignment="CENTER" wrapText="true" />
+        </VBox>
+
+        <!-- User Login Card -->
+        <VBox alignment="CENTER" prefHeight="300.0" prefWidth="280.0" spacing="20.0" style="-fx-background-color: white;">
+            <padding>
+                <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+            </padding>
+            
+            <!-- User Icon Circle -->
+            <Circle fill="#C8E6C9" radius="50.0" />
+            
+            <Button onAction="#onUserLoginClick" prefHeight="35.0" prefWidth="160.0" text="User Login">
+            <font>
+               <Font name="System Bold" size="14.0" />
+            </font></Button>
+            
+            <Label style="-fx-font-size: 12px; -fx-text-fill: #546E7A;" text="Access as client or rider" textAlignment="CENTER" wrapText="true" />
+        </VBox>
+    </HBox>
+</VBox>
