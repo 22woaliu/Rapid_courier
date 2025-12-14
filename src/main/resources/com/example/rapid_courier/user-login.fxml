@@ -6,24 +6,26 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" prefHeight="600.0" prefWidth="500.0" spacing="20.0" style="-fx-background-color: #FAFAFA;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/25" fx:controller="com.example.rapid_courier.UserLoginController">
+<VBox alignment="CENTER" prefHeight="700.0" prefWidth="500.0" spacing="20.0" style="-fx-background-color: #FAFAFA;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rapid_courier.UserLoginController">
     <padding>
         <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
     </padding>
-
-    <!-- Back Button -->
-    <Button alignment="TOP_LEFT" onAction="#onBackClick" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #3155d7;" text="Back" textFill="#fcfdff">
-        <VBox.margin>
-            <Insets bottom="0" left="0" right="350" top="-20" />
-        </VBox.margin>
-      <font>
-         <Font name="System Bold" size="12.0" />
-      </font>
-    </Button>
+   <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="75.0" prefWidth="496.0">
+      <children>
+      
+          <!-- Back Button -->
+          <Button alignment="TOP_LEFT" onAction="#onBackClick" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #3155d7;" text="Back" textFill="#fcfdff">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font>
+          </Button>
+      </children>
+   </HBox>
 
     <!-- User Icon -->
     <Circle fill="#C8E6C9" radius="50.0" />
@@ -35,7 +37,7 @@
     </VBox>
 
     <!-- Login Form -->
-    <VBox alignment="CENTER" prefWidth="350.0" spacing="15.0">
+    <VBox alignment="CENTER" prefHeight="304.0" prefWidth="420.0" spacing="15.0">
         <Label style="-fx-text-fill: #000000;" text="User Type">
          <font>
             <Font size="13.0" />
@@ -64,12 +66,5 @@
             <Font name="System Bold" size="14.0" />
          </font>
         </Button>
-    </VBox>
-
-    <!-- Demo Credentials -->
-    <VBox alignment="CENTER_LEFT" prefWidth="350.0" spacing="3.0" style="-fx-background-color: white;">
-        <Label text="Demo:" />
-        <Label text="Client: +1234567890 / password" />
-        <Label text="Rider: +9999888877 / password / RIDER2025" />
     </VBox>
 </VBox>

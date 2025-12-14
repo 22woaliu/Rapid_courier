@@ -9,7 +9,7 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" prefHeight="600.0" prefWidth="500.0" spacing="20.0" style="-fx-background-color: #FAFAFA;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/25" fx:controller="com.example.rapid_courier.AdminLoginController">
+<VBox alignment="CENTER" prefHeight="600.0" prefWidth="500.0" spacing="20.0" style="-fx-background-color: #FAFAFA;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rapid_courier.AdminLoginController">
     <padding>
         <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
     </padding>
@@ -65,12 +65,5 @@
             <Font name="System Bold" size="14.0" />
          </font>
         </Button>
-    </VBox>
-
-    <!-- Demo Credentials -->
-    <VBox alignment="CENTER_LEFT" prefWidth="350.0" spacing="3.0" style="-fx-background-color: white;">
-        <Label text="Demo:" />
-        <Label text="Username: admin" />
-        <Label text="Password: admin123" />
     </VBox>
 </VBox>

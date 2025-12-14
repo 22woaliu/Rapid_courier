@@ -42,19 +42,5 @@ public class AdminLoginController {
         String username = usernameField.getText();
         String password = passwordField.getText();
 
-        // Demo credentials validation
-        if (username.equals("admin") && password.equals("admin123")) {
-            Alert alert = new Alert(AlertType.INFORMATION);
-            alert.setTitle("Login Successful");
-            alert.setHeaderText(null);
-            alert.setContentText("Welcome Admin! Login successful.");
-            alert.showAndWait();
-        } else {
-            Alert alert = new Alert(AlertType.ERROR);
-            alert.setTitle("Login Failed");
-            alert.setHeaderText(null);
-            alert.setContentText("Invalid username or password. Please try again.");
-            alert.showAndWait();
-        }
     }
 }
