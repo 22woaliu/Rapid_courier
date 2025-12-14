@@ -5,105 +5,63 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Circle?>
-<?import javafx.scene.text.Font?>
 
-<VBox prefHeight="640.0" prefWidth="460.0" spacing="20.0" style="-fx-background-color: #F5F5F5;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+<VBox alignment="CENTER" prefHeight="600.0" prefWidth="500.0" spacing="20.0"
+      style="-fx-background-color: #FAFAFA;" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.rapid_courier.AdminLoginController">
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+        <Insets bottom="40.0" left="40.0" right="40.0" top="40.0"/>
     </padding>
-    
+
     <!-- Back Button -->
-    <HBox alignment="CENTER_LEFT">
-        <Button onAction="#onBackButtonClick" style="-fx-background-color: #4365eb;" text="Back" textFill="#f5f5f5">
-            <font>
-                <Font size="14.0" />
-            </font>
+    <Button text="Back" onAction="#onBackClick" alignment="TOP_LEFT"
+            style="-fx-background-color: #5C6BC0; -fx-text-fill: white; -fx-font-size: 12px; -fx-background-radius: 5; -fx-cursor: hand;"
+            prefWidth="80.0" prefHeight="30.0">
+        <VBox.margin>
+            <Insets bottom="0" left="0" right="350" top="-20"/>
+        </VBox.margin>
+    </Button>
+
+    <!-- Admin Icon -->
+    <Circle radius="50.0" fill="#BBDEFB"/>
+
+    <!-- Title Section -->
+    <VBox alignment="CENTER" spacing="5.0">
+        <Label text="Admin Login" style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #37474F;"/>
+        <Label text="Access the admin dashboard" style="-fx-font-size: 13px; -fx-text-fill: #546E7A;"/>
+    </VBox>
+
+    <!-- Login Form -->
+    <VBox spacing="15.0" prefWidth="350.0">
+        <Label text="Username" style="-fx-font-size: 13px; -fx-text-fill: #37474F;"/>
+        <TextField fx:id="usernameField" promptText="Enter username"
+                   style="-fx-background-color: white; -fx-border-color: #BDBDBD; -fx-border-radius: 5; -fx-background-radius: 5;"
+                   prefHeight="40.0"/>
+
+        <Label text="Password" style="-fx-font-size: 13px; -fx-text-fill: #37474F;">
+            <VBox.margin>
+                <Insets top="5"/>
+            </VBox.margin>
+        </Label>
+        <PasswordField fx:id="passwordField" promptText="Enter password"
+                       style="-fx-background-color: white; -fx-border-color: #BDBDBD; -fx-border-radius: 5; -fx-background-radius: 5;"
+                       prefHeight="40.0"/>
+
+        <Button text="Login" onAction="#onLoginClick"
+                style="-fx-background-color: #5C6BC0; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 5; -fx-cursor: hand;"
+                prefHeight="45.0">
+            <VBox.margin>
+                <Insets top="10"/>
+            </VBox.margin>
         </Button>
-    </HBox>
-    
-    <!-- Main Content Card -->
-    <VBox alignment="TOP_CENTER" spacing="25.0" style="-fx-background-color: #FFFFFF;">
-        <padding>
-            <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
-        </padding>
-        
-        <!-- Shield Icon -->
-        <StackPane>
-            <Circle fill="#D6E4FF" radius="45.0" />
-        </StackPane>
-        
-        <!-- Title -->
-        <VBox alignment="CENTER" spacing="8.0">
-            <Label text="Admin Login" textFill="#2C3E50">
-                <font>
-                    <Font name="System Bold" size="24.0" />
-                </font>
-            </Label>
-            <Label text="Access the admin dashboard" textFill="#546E7A">
-                <font>
-                    <Font size="13.0" />
-                </font>
-            </Label>
-        </VBox>
-        
-        <!-- Username Field -->
-        <VBox spacing="8.0">
-            <Label text="Username" textFill="#2C3E50">
-                <font>
-                    <Font size="13.0" />
-                </font>
-            </Label>
-            <HBox alignment="CENTER_LEFT" prefHeight="45.0" spacing="10.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #000000;">
-                <TextField fx:id="usernameField" prefHeight="32.0" prefWidth="340.0" promptText="Enter username" style="-fx-background-color: #ffffff;">
-                    <font>
-                        <Font size="14.0" />
-                    </font>
-                </TextField>
-            </HBox>
-        </VBox>
-        
-        <!-- Password Field -->
-        <VBox spacing="8.0">
-            <Label text="Password" textFill="#2C3E50">
-                <font>
-                    <Font size="13.0" />
-                </font>
-            </Label>
-            <HBox alignment="CENTER_LEFT" prefHeight="45.0" spacing="10.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #000000;">
-                <PasswordField fx:id="passwordField" prefHeight="32.0" prefWidth="422.0" promptText="Enter password" style="-fx-background-color: #ffffff;">
-                    <font>
-                        <Font size="14.0" />
-                    </font>
-                </PasswordField>
-            </HBox>
-        </VBox>
-      <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="412.0" style="-fx-background-color: #4365eb;" text="Login" textFill="WHITE">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Button>
-        
-        <!-- Demo Credentials -->
-        <VBox spacing="5.0" style="-fx-background-color: #F9F9F9;">
-            <Label text="Demo:" textFill="#546E7A">
-                <font>
-                    <Font size="11.0" />
-                </font>
-            </Label>
-            <Label text="Username: admin" textFill="#546E7A">
-                <font>
-                    <Font size="11.0" />
-                </font>
-            </Label>
-            <Label text="Password: admin123" textFill="#546E7A">
-                <font>
-                    <Font size="11.0" />
-                </font>
-            </Label>
-        </VBox>
+    </VBox>
+
+    <!-- Demo Credentials -->
+    <VBox alignment="CENTER_LEFT" spacing="3.0" style="-fx-background-color: #FFF9C4; -fx-padding: 10; -fx-background-radius: 5;" prefWidth="350.0">
+        <Label text="Demo:" style="-fx-font-size: 11px; -fx-font-weight: bold; -fx-text-fill: #F57F17;"/>
+        <Label text="Username: admin" style="-fx-font-size: 11px; -fx-text-fill: #F57F17;"/>
+        <Label text="Password: admin123" style="-fx-font-size: 11px; -fx-text-fill: #F57F17;"/>
     </VBox>
 </VBox>
