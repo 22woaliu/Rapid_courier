@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rapid_courier.SignUpController">
+   <center>
+      <VBox alignment="CENTER" style="-fx-padding: 20;">
+            <children>
+                <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" spacing="20.0" style="-fx-background-color: #FAFAFA; -fx-background-radius: 10;" VBox.vgrow="ALWAYS">
+                    <padding>
+                        <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+                    </padding>
+
+                    <!-- Back Button -->
+                    <Button alignment="CENTER" onAction="#onBackClick" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: gray; -fx-text-fill: white;" text="Back" textFill="WHITE">
+                        <VBox.margin>
+                            <Insets bottom="0" left="0" right="350" top="-20" />
+                        </VBox.margin>
+                        <font>
+                            <Font name="System Bold" size="14.0" />
+                        </font>
+                    </Button>
+
+                    <!-- User Icon -->
+                    <Circle fill="#C8E6C9" radius="40.0" />
+
+                    <!-- Title Section -->
+                    <VBox alignment="CENTER" spacing="5.0">
+                        <Label style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #37474F;" text="Create Account" />
+                        <Label style="-fx-font-size: 13px; -fx-text-fill: #546E7A;" text="Sign up to get started" />
+                    </VBox>
+
+                    <!-- Sign Up Form -->
+                    <VBox alignment="CENTER" prefWidth="380.0" spacing="15.0">
+                        <VBox.margin>
+                            <Insets top="10" />
+                        </VBox.margin>
+
+                        <!-- User Type Field -->
+                        <VBox spacing="8.0">
+                            <Label style="-fx-text-fill: #37474F; -fx-font-size: 13px;" text="User Type *">
+                                <font>
+                                    <Font name="System Bold" size="13.0" />
+                                </font>
+                            </Label>
+                            <ComboBox fx:id="userTypeComboBox" onAction="#onUserTypeChange" prefHeight="28.0" prefWidth="444.0" promptText="Client" style="-fx-background-color: white; -fx-border-color: #E0E0E0; -fx-border-radius: 8; -fx-background-radius: 8;" />
+                        </VBox>
+
+                        <!-- Full Name Field -->
+                        <VBox spacing="8.0">
+                            <Label style="-fx-text-fill: #37474F; -fx-font-size: 13px;" text="Full Name *">
+                                <font>
+                                    <Font name="System Bold" size="13.0" />
+                                </font>
+                            </Label>
+                            <HBox alignment="CENTER_LEFT" prefHeight="45.0" spacing="10.0" style="-fx-background-color: white; -fx-border-color: #E0E0E0; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 0 15 0 15;">
+                                <TextField fx:id="fullNameField" prefHeight="45.0" prefWidth="330.0" promptText="John Doe" style="-fx-background-color: transparent; -fx-border-color: transparent;" />
+                            </HBox>
+                        </VBox>
+
+                        <!-- Phone Number Field -->
+                        <VBox spacing="8.0">
+                            <Label style="-fx-text-fill: #37474F; -fx-font-size: 13px;" text="Phone Number *">
+                                <font>
+                                    <Font name="System Bold" size="13.0" />
+                                </font>
+                            </Label>
+                            <HBox alignment="CENTER_LEFT" prefHeight="45.0" spacing="10.0" style="-fx-background-color: white; -fx-border-color: #E0E0E0; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 0 15 0 15;">
+                                <TextField fx:id="phoneNumberField" prefHeight="45.0" prefWidth="330.0" promptText="+1234567890" style="-fx-background-color: transparent; -fx-border-color: transparent;" />
+                            </HBox>
+                        </VBox>
+
+                        <!-- Address Field -->
+                        <VBox spacing="8.0">
+                            <Label style="-fx-text-fill: #37474F; -fx-font-size: 13px;" text="Address *">
+                                <font>
+                                    <Font name="System Bold" size="13.0" />
+                                </font>
+                            </Label>
+                            <HBox alignment="CENTER_LEFT" prefHeight="45.0" spacing="10.0" style="-fx-background-color: white; -fx-border-color: #E0E0E0; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 0 15 0 15;">
+                                <TextField fx:id="addressField" prefHeight="45.0" prefWidth="330.0" promptText="123 Main St, City, State" style="-fx-background-color: transparent; -fx-border-color: transparent;" />
+                            </HBox>
+                        </VBox>
+
+                        <!-- Password Field -->
+                        <VBox spacing="8.0">
+                            <Label style="-fx-text-fill: #37474F; -fx-font-size: 13px;" text="Password *">
+                                <font>
+                                    <Font name="System Bold" size="13.0" />
+                                </font>
+                            </Label>
+                            <HBox alignment="CENTER_LEFT" prefHeight="45.0" spacing="10.0" style="-fx-background-color: white; -fx-border-color: #E0E0E0; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 0 15 0 15;">
+                                <PasswordField fx:id="passwordField" prefHeight="45.0" prefWidth="330.0" promptText="Enter password" style="-fx-background-color: transparent; -fx-border-color: transparent;" />
+                            </HBox>
+                        </VBox>
+
+                        <!-- Confirm Password Field -->
+                        <VBox spacing="8.0">
+                            <Label style="-fx-text-fill: #37474F; -fx-font-size: 13px;" text="Confirm Password *">
+                                <font>
+                                    <Font name="System Bold" size="13.0" />
+                                </font>
+                            </Label>
+                            <HBox alignment="CENTER_LEFT" prefHeight="45.0" spacing="10.0" style="-fx-background-color: white; -fx-border-color: #E0E0E0; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 0 15 0 15;">
+                                <PasswordField fx:id="confirmPasswordField" prefHeight="45.0" prefWidth="330.0" promptText="Re-enter password" style="-fx-background-color: transparent; -fx-border-color: transparent;" />
+                            </HBox>
+                        </VBox>
+
+                        <!-- Rider Token Field (Hidden by default) -->
+                        <VBox fx:id="riderTokenVBox" managed="false" spacing="8.0" visible="false">
+                            <Label style="-fx-text-fill: #37474F; -fx-font-size: 13px;" text="Rider Token *">
+                                <font>
+                                    <Font name="System Bold" size="13.0" />
+                                </font>
+                            </Label>
+                            <HBox alignment="CENTER_LEFT" prefHeight="45.0" spacing="10.0" style="-fx-background-color: white; -fx-border-color: #E0E0E0; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 0 15 0 15;">
+                                <Label style="-fx-text-fill: #9E9E9E; -fx-font-size: 16px;" text="🎫" />
+                                <TextField fx:id="riderTokenField" prefHeight="45.0" prefWidth="330.0" promptText="Enter your rider token" style="-fx-background-color: transparent; -fx-border-color: transparent;" />
+                            </HBox>
+                        </VBox>
+
+                        <!-- Sign Up Button -->
+                        <Button onAction="#onSignUpClick" prefHeight="45.0" prefWidth="380.0" style="-fx-background-color: #4CAF50; -fx-background-radius: 8; -fx-cursor: hand;" text="Sign Up" textFill="WHITE">
+                            <VBox.margin>
+                                <Insets top="15" />
+                            </VBox.margin>
+                            <font>
+                                <Font name="System Bold" size="16.0" />
+                            </font>
+                        </Button>
+
+                        <!-- Login Link -->
+                        <Label alignment="CENTER" prefWidth="380.0">
+                            <VBox.margin>
+                                <Insets top="10" />
+                            </VBox.margin>
+                            <graphic>
+                                <HBox alignment="CENTER" spacing="5.0" />
+                            </graphic>
+                        </Label>
+
+                    </VBox>
+                </VBox>
+
+            </children>
+        </VBox>
+   </center>
+</BorderPane>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: #E8F5E8;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rapid_courier.RiderPageController">
+    <top>
+        <HBox alignment="CENTER_LEFT" prefHeight="60.0" spacing="20.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #E0E0E0; -fx-border-width: 0 0 1 0;">
+            <padding>
+                <Insets left="30.0" right="30.0" />
+            </padding>
+
+            <!-- Logo and Title -->
+            <HBox alignment="CENTER_LEFT" spacing="12.0" HBox.hgrow="ALWAYS">
+                <Label text="Rider Portal" textFill="#2C3E50">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Label>
+            </HBox>
+
+            <!-- User Info and Logout -->
+            <HBox alignment="CENTER_RIGHT" spacing="20.0">
+                <Label textFill="#546E7A">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+
+                <Button onAction="#onLogoutClick" onMouseEntered="#onMouseEntered" onMouseExited="#onMouseExited" style="-fx-background-color: transparent;" text="Logout">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+            </HBox>
+        </HBox>
+    </top>
+   <center>
+      <ScrollPane fitToHeight="true" fitToWidth="true" BorderPane.alignment="CENTER">
+         <content>
+              <VBox alignment="CENTER" spacing="40.0" style="-fx-background-color: #E8F5E8;">
+                  <VBox alignment="CENTER" spacing="10.0">
+                      <Label text="Welcome, " textFill="#2C3E50">
+                          <font>
+                              <Font name="System Bold" size="32.0" />
+                          </font>
+                      </Label>
+                      <Label text="What would you like to do today?" textFill="#546E7A">
+                          <font>
+                              <Font size="16.0" />
+                          </font>
+                      </Label>
+                  </VBox>
+               <VBox alignment="CENTER" maxWidth="-Infinity" prefHeight="200.0" prefWidth="350.0">
+                   <Button onAction="#onViewOrder" onMouseEntered="#onCardMouseEntered" onMouseExited="#onCardMouseExited" prefHeight="220.0" prefWidth="350.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 8;">
+                       <graphic>
+                           <VBox alignment="CENTER" spacing="20.0">
+                               <padding>
+                                   <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                               </padding>
+      
+                               <StackPane>
+                                   <Circle fill="#cdeacd" radius="40.0" />
+                               </StackPane>
+      
+                               <Label text="View Orders" textFill="#2C3E50">
+                                   <font>
+                                       <Font name="System Bold" size="20.0" />
+                                   </font>
+                               </Label>
+      
+                               <Label text="See all available delivery orders" textAlignment="CENTER" textFill="#546E7A">
+                                   <font>
+                                       <Font size="14.0" />
+                                   </font>
+                               </Label>
+                               <cursor>
+                                   <Cursor fx:constant="DEFAULT" />
+                               </cursor>
+                           </VBox>
+                       </graphic>
+                   </Button>
+               </VBox>
+               <VBox alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="640.0" spacing="15.0">
+                  <children>
+                     <Label style="-fx-font-size: 16; -fx-font-weight: bold;" text="Order stats" />
+                     <HBox alignment="CENTER" spacing="40.0">
+                        <children>
+                           <VBox prefHeight="80.0" prefWidth="300.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 8; -fx-padding: 20;">
+                              <children>
+                                 <Label style="-fx-font-size: 18;" text="Total orders" />
+                                 <Label fx:id="totalOrdersLabel" style="-fx-font-size: 20; -fx-font-weight: bold;" text="0" />
+                              </children>
+                           </VBox>
+                           <VBox prefHeight="80.0" prefWidth="300.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 8; -fx-padding: 20;">
+                              <children>
+                                 <Label style="-fx-font-size: 18;" text="Picked orders" />
+                                 <Label fx:id="pickedOrdersLabel" style="-fx-font-size: 20; -fx-font-weight: bold;" text="0" />
+                              </children>
+                           </VBox>
+                        </children>
+                     </HBox>
+                     <HBox alignment="CENTER" spacing="40.0">
+                        <children>
+                           <VBox prefHeight="80.0" prefWidth="300.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 8; -fx-padding: 20;">
+                              <children>
+                                 <Label style="-fx-font-size: 18;" text="In transit orders" />
+                                 <Label fx:id="inTransitOrdersLabel" style="-fx-font-size: 20; -fx-font-weight: bold;" text="0" />
+                              </children>
+                           </VBox>
+                           <VBox prefHeight="80.0" prefWidth="300.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 8; -fx-padding: 20;">
+                              <children>
+                                 <Label style="-fx-font-size: 18;" text="Delivered orders" />
+                                 <Label fx:id="deliveredOrdersLabel" style="-fx-font-size: 20; -fx-font-weight: bold;" text="0" />
+                              </children>
+                           </VBox>
+                        </children>
+                     </HBox>
+                  </children>
+               </VBox>
+               <padding>
+                  <Insets bottom="40.0" left="40.0" right="40.0" top="80.0" />
+               </padding>
+              </VBox>
+         </content>
+      </ScrollPane>
+   </center>
+</BorderPane>

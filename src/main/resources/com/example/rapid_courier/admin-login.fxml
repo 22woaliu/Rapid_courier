@@ -5,65 +5,73 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" prefHeight="600.0" prefWidth="500.0" spacing="20.0" style="-fx-background-color: #FAFAFA;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rapid_courier.AdminLoginController">
-    <padding>
-        <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
-    </padding>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rapid_courier.AdminLoginController">
+   <center>
 
-    <!-- Back Button -->
-    <Button alignment="TOP_LEFT" onAction="#onBackClick" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #5C6BC0;" text="Back" textFill="WHITE">
-        <VBox.margin>
-            <Insets bottom="0" left="0" right="350" top="-20" />
-        </VBox.margin>
-      <font>
-         <Font name="System Bold" size="13.0" />
-      </font>
-    </Button>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+          <VBox alignment="CENTER" maxWidth="-Infinity" prefHeight="600.0" prefWidth="500.0" spacing="20.0" style="-fx-background-color: #FAFAFA; -fx-background-radius: 10;">
+              <padding>
+                  <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+              </padding>
 
-    <!-- Admin Icon -->
-    <Circle fill="#BBDEFB" radius="50.0" />
+              <!-- Back Button -->
+              <Button alignment="CENTER" onAction="#onBackClick" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: gray;" text="Back" textFill="WHITE">
+                  <VBox.margin>
+                      <Insets bottom="0" left="0" right="350" top="-20" />
+                  </VBox.margin>
+                  <font>
+                      <Font name="System Bold" size="13.0" />
+                  </font>
+              </Button>
 
-    <!-- Title Section -->
-    <VBox alignment="CENTER" spacing="5.0">
-        <Label text="Admin Login">
-         <font>
-            <Font name="System Bold" size="24.0" />
-         </font></Label>
-        <Label style="-fx-text-fill: #546E7A;" text="Access the admin dashboard">
-         <font>
-            <Font size="13.0" />
-         </font></Label>
-    </VBox>
+              <!-- Admin Icon -->
+              <Circle fill="#BBDEFB" radius="50.0" />
 
-    <!-- Login Form -->
-    <VBox alignment="CENTER" prefWidth="350.0" spacing="15.0">
-        <Label text="Username">
-         <font>
-            <Font size="14.0" />
-         </font></Label>
-        <TextField fx:id="usernameField" prefHeight="40.0" promptText="Enter username" style="-fx-background-color: white; -fx-border-color: black;" />
+              <!-- Title Section -->
+              <VBox alignment="CENTER" spacing="5.0">
+                  <Label text="Admin Login">
+                      <font>
+                          <Font name="System Bold" size="24.0" />
+                      </font></Label>
+                  <Label style="-fx-text-fill: #546E7A;" text="Access the admin dashboard">
+                      <font>
+                          <Font size="13.0" />
+                      </font></Label>
+              </VBox>
 
-        <Label text="Password">
-            <VBox.margin>
-                <Insets top="5" />
-            </VBox.margin>
-         <font>
-            <Font size="14.0" />
-         </font>
-        </Label>
-        <PasswordField fx:id="passwordField" prefHeight="40.0" promptText="Enter password" style="-fx-background-color: white; -fx-border-color: black;" />
+              <!-- Login Form -->
+              <VBox alignment="CENTER" prefWidth="350.0" spacing="15.0">
+                  <Label text="Username">
+                      <font>
+                          <Font size="14.0" />
+                      </font></Label>
+                  <TextField fx:id="usernameField" prefHeight="40.0" promptText="Enter username" style="-fx-background-color: white; -fx-border-color: #e0e0e0;" />
 
-        <Button onAction="#onLoginClick" prefHeight="31.0" prefWidth="520.0" style="-fx-background-color: #5C6BC0;" text="Login" textFill="WHITE">
-            <VBox.margin>
-                <Insets top="10" />
-            </VBox.margin>
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-        </Button>
-    </VBox>
-</VBox>
+                  <Label text="Password">
+                      <VBox.margin>
+                          <Insets top="5" />
+                      </VBox.margin>
+                      <font>
+                          <Font size="14.0" />
+                      </font>
+                  </Label>
+                  <PasswordField fx:id="passwordField" prefHeight="40.0" promptText="Enter password" style="-fx-background-color: white; -fx-border-color: #e0e0e0;" />
+
+                  <Button onAction="#onLoginClick" prefHeight="31.0" prefWidth="520.0" style="-fx-background-color: #0059ff;" text="Login" textFill="WHITE">
+                      <VBox.margin>
+                          <Insets top="10" />
+                      </VBox.margin>
+                      <font>
+                          <Font name="System Bold" size="14.0" />
+                      </font>
+                  </Button>
+              </VBox>
+          </VBox>
+      </VBox>
+   </center>
+</BorderPane>

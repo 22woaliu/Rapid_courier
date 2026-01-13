@@ -6,65 +6,104 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" prefHeight="700.0" prefWidth="500.0" spacing="20.0" style="-fx-background-color: #FAFAFA;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rapid_courier.UserLoginController">
-    <padding>
-        <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
-    </padding>
-   <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="75.0" prefWidth="496.0">
-      <children>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rapid_courier.UserLoginController">
+   <center>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+              <VBox alignment="CENTER" maxWidth="600.0" prefHeight="600.0" prefWidth="600.0" spacing="20.0" style="-fx-background-color: #FAFAFA; -fx-background-radius: 10;">
+                  <padding>
+                      <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+                  </padding>
       
-          <!-- Back Button -->
-          <Button alignment="TOP_LEFT" onAction="#onBackClick" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #3155d7;" text="Back" textFill="#fcfdff">
-            <font>
-               <Font name="System Bold" size="12.0" />
-            </font>
-          </Button>
-      </children>
-   </HBox>
-
-    <!-- User Icon -->
-    <Circle fill="#C8E6C9" radius="50.0" />
-
-    <!-- Title Section -->
-    <VBox alignment="CENTER" spacing="5.0">
-        <Label style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #37474F;" text="User Login" />
-        <Label style="-fx-font-size: 13px; -fx-text-fill: #546E7A;" text="Sign in to access your account" />
-    </VBox>
-
-    <!-- Login Form -->
-    <VBox alignment="CENTER" prefHeight="304.0" prefWidth="420.0" spacing="15.0">
-        <Label style="-fx-text-fill: #000000;" text="User Type">
-         <font>
-            <Font size="13.0" />
-         </font></Label>
-        <ComboBox fx:id="userTypeComboBox" prefHeight="25.0" prefWidth="447.0" promptText="Choose user type" style="-fx-background-color: white; -fx-border-color: black;" />
-
-        <Label style="-fx-text-fill: black;" text="Phone Number">
-            <VBox.margin>
-                <Insets top="5" />
-            </VBox.margin>
-        </Label>
-        <TextField fx:id="phoneNumberField" prefHeight="40.0" promptText="" style="-fx-background-color: white; -fx-border-color: black;" />
-
-        <Label style="-fx-text-fill: black;" text="Password">
-            <VBox.margin>
-                <Insets top="5" />
-            </VBox.margin>
-        </Label>
-        <PasswordField fx:id="passwordField" prefHeight="40.0" promptText="" style="-fx-background-color: white; -fx-border-color: black;" />
-
-        <Button onAction="#onLoginClick" prefHeight="35.0" prefWidth="420.0" style="-fx-background-color: #3155d7;" text="Login" textFill="WHITE">
-            <VBox.margin>
-                <Insets top="10" />
-            </VBox.margin>
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-        </Button>
-    </VBox>
-</VBox>
+                  <!-- Back Button -->
+                  <Button alignment="CENTER" onAction="#onBackClick" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: gray;" text="Back" textFill="#fcfdff">
+                      <VBox.margin>
+                          <Insets bottom="0" left="0" right="350" top="-20" />
+                      </VBox.margin>
+                      <font>
+                          <Font name="System Bold" size="12.0" />
+                      </font>
+                  </Button>
+      
+                  <!-- User Icon -->
+                  <Circle fill="#C8E6C9" radius="50.0" />
+      
+                  <!-- Title Section -->
+                  <VBox alignment="CENTER" spacing="5.0">
+                      <Label style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #37474F;" text="User Login" />
+                      <Label style="-fx-font-size: 13px; -fx-text-fill: #546E7A;" text="Sign in to access your account" />
+                  </VBox>
+      
+                  <!-- Login Form -->
+                  <VBox alignment="CENTER" prefWidth="350.0" spacing="15.0">
+                      <Label style="-fx-text-fill: #000000;" text="User Type">
+                          <font>
+                              <Font size="13.0" />
+                          </font>
+                  </Label>
+                      <ComboBox fx:id="userTypeComboBox" onAction="#switchUserType" prefHeight="25.0" prefWidth="447.0" promptText="Choose user type" style="-fx-background-color: white; -fx-border-color: #e0e0e0;" />
+      
+                      <StackPane prefHeight="150.0" prefWidth="200.0">
+                          <VBox fx:id="clientVBox" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="15.0">
+                              <Label style="-fx-text-fill: black;" text="Phone Number">
+                                  <VBox.margin>
+                                      <Insets />
+                                  </VBox.margin>
+                              </Label>
+                              <TextField fx:id="phoneNumberField" maxWidth="-Infinity" prefHeight="40.0" prefWidth="447.0" promptText="" style="-fx-background-color: white; -fx-border-color: #e0e0e0;" />
+      
+                              <Label style="-fx-text-fill: black;" text="Password">
+                                  <VBox.margin>
+                                      <Insets top="5" />
+                                  </VBox.margin>
+                              </Label>
+                              <PasswordField fx:id="passwordField" maxWidth="-Infinity" prefHeight="40.0" prefWidth="447.0" promptText="" style="-fx-background-color: white; -fx-border-color: #e0e0e0;" />
+      
+                          </VBox>
+      
+                          <VBox fx:id="riderVBox" alignment="CENTER" managed="false" prefHeight="200.0" prefWidth="100.0" spacing="15.0" visible="false">
+                              <Label style="-fx-text-fill: black;" text="Phone Number">
+                        </Label>
+                              <TextField fx:id="riderPhoneNumberField" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="447.0" promptText="" style="-fx-background-color: white; -fx-border-color: #e0e0e0;" />
+      
+                              <Label style="-fx-text-fill: black;" text="Password">
+                                  <VBox.margin>
+                                      <Insets top="5" />
+                                  </VBox.margin>
+                              </Label>
+                              <PasswordField fx:id="riderPasswordField" maxWidth="-Infinity" prefHeight="40.0" prefWidth="447.0" promptText="" style="-fx-background-color: white; -fx-border-color: #e0e0e0;" />
+                              <Label text="Rider Token" />
+                              <TextField fx:id="riderTokenField" maxWidth="-Infinity" prefHeight="40.0" prefWidth="447.0" promptText="" style="-fx-background-color: white; -fx-border-color: #e0e0e0;" />
+                          </VBox>
+                      </StackPane>
+      
+                      <Button onAction="#onLoginClick" prefHeight="35.0" prefWidth="420.0" style="-fx-background-color: #0059ff;" text="Login" textFill="WHITE">
+                          <VBox.margin>
+                              <Insets top="10" />
+                          </VBox.margin>
+                          <font>
+                              <Font name="System Bold" size="14.0" />
+                          </font>
+                      </Button>
+      
+                      <Button onAction="#onSignUpClick" prefHeight="35.0" prefWidth="420.0" style="-fx-background-color: #0059ff;" text="SignUp" textFill="WHITE">
+                          <VBox.margin>
+                              <Insets top="10" />
+                          </VBox.margin>
+                          <font>
+                              <Font name="System Bold" size="14.0" />
+                          </font>
+                      </Button>
+      
+                  </VBox>
+              </VBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

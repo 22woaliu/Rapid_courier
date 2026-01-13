@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+
+<BorderPane prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: #F5F7FA;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rapid_courier.RiderViewOrderController">
+    <top>
+        <HBox prefHeight="60.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #E0E0E0; -fx-border-width: 0 0 1 0;" BorderPane.alignment="CENTER">
+            <children>
+                <Button mnemonicParsing="false" onAction="#onBackClick" style="-fx-background-color: transparent; -fx-cursor: hand;">
+                    <graphic>
+                        <Label style="-fx-font-size: 15; -fx-text-fill: #6B7280; -fx-font-weight: bold;" text=" ❮❮ Back to Dashboard" />
+                    </graphic>
+                </Button>
+            </children>
+            <padding>
+                <Insets left="20.0" top="15.0" />
+            </padding>
+        </HBox>
+    </top>
+    <center>
+        <ScrollPane fitToWidth="true" style="-fx-background-color: transparent;">
+            <content>
+                <VBox spacing="20.0" style="-fx-padding: 30;">
+                    <children>
+                        <VBox spacing="8.0">
+                            <children>
+                                <Label style="-fx-font-size: 22; -fx-font-weight: bold; -fx-text-fill: #111827;" text="Your Courier Orders" />
+                                <Label style="-fx-font-size: 14; -fx-text-fill: #6B7280;" text="Track the status of your deliveries - Auto-refreshing every 5 seconds" />
+                            </children>
+                        </VBox>
+                        <VBox fx:id="orderListVBox" spacing="15.0">
+                            <!-- Orders will be dynamically loaded here -->
+                        </VBox>
+                    </children>
+                </VBox>
+            </content>
+        </ScrollPane>
+    </center>
+</BorderPane>

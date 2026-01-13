@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: #c8e6c9;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rapid_courier.ClientReqSubmitController">
+   <center>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+             <VBox alignment="CENTER" maxWidth="600.0" prefHeight="400.0" prefWidth="600.0" spacing="30.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 10;">
+                 <Circle fill="#00800016" radius="30.0" stroke="#00800016" strokeType="INSIDE" />
+                 <Label style="-fx-font-size: 20;" text="Request Submitted Successfully!" />
+                 <Label alignment="CENTER" style="-fx-font-size: 14; -fx-text-fill: #808080100;" text="     Your courier request has been received. A rider will be &#10;              assigned shortly and you can track the status &#10;                           from your dashboard." />
+                 <Button mnemonicParsing="false" onAction="#onBackClick" prefWidth="240.0" style="-fx-font-size: 16; -fx-background-color: #2196f3; -fx-text-fill: white;" text="Back to home" />
+             </VBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

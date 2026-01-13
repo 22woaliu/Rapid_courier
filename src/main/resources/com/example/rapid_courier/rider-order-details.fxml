@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: #F4F6F9;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rapid_courier.RiderOrderDetailsController">
+
+    <!-- TOP BAR -->
+    <top>
+        <HBox prefHeight="60.0" style="-fx-background-color: #FFFFFF;-fx-border-color: #E0E0E0;-fx-border-width: 0 0 1 0;" BorderPane.alignment="CENTER">
+
+            <padding>
+                <Insets left="20.0" top="15.0" />
+            </padding>
+
+            <children>
+                <Button mnemonicParsing="false" onAction="#onBackClick" style="-fx-background-color: transparent; -fx-cursor: hand;">
+                    <graphic>
+                        <Label style="-fx-font-size: 15; -fx-text-fill: #6B7280;-fx-font-weight: bold;" text="❮❮ Back " />
+                    </graphic>
+                </Button>
+            </children>
+        </HBox>
+    </top>
+
+    <!-- CENTER -->
+    <center>
+        <ScrollPane fitToWidth="true" style="-fx-background-color: transparent;">
+            <content>
+
+                <VBox alignment="CENTER" style="-fx-padding: 50;">
+
+                    <children>
+                        <VBox alignment="CENTER" maxWidth="700.0" prefWidth="700.0" spacing="30.0" style="-fx-background-color: #FFFFFF;                                      -fx-background-radius: 14;                                      -fx-padding: 25;                                      -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 16, 0.3, 0, 5);">
+
+                            <children>
+
+                                <!-- HEADER -->
+                                <VBox alignment="CENTER_LEFT" spacing="6">
+                                    <children>
+                                        <Label fx:id="orderNumberLabel" style="-fx-font-size: 20; -fx-font-weight: bold;" text="Order #ORD001" />
+                                        <Label style="-fx-text-fill: #6B7280;" text="Update your delivery progress" />
+                                    </children>
+                                </VBox>
+
+                                <!-- ROUTE INFO -->
+                                <VBox spacing="10" style="-fx-background-color: #BBDEFA82;-fx-background-radius: 12;                                              -fx-border-color: #E0E0E0;                                              -fx-border-radius: 12;                                              -fx-border-width: 1;                                              -fx-padding: 15;">
+                                    <children>
+                                        <Label style="-fx-font-size: 20;" text="Route Information" />
+                                        <VBox>
+                                            <children>
+                                                <Label text="Pickup Address" />
+                                                <Label fx:id="pickupAddressLabel" style="-fx-text-fill: #6B7280;" text="Label" />
+                                            </children>
+                                        </VBox>
+                                        <VBox>
+                                            <children>
+                                                <Label text="Delivery Address" />
+                                                <Label fx:id="deliveryAddressLabel" style="-fx-text-fill: #6B7280;" text="Label" />
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </VBox>
+
+                                <!-- CONTACT INFO -->
+                                <VBox spacing="10" style="-fx-background-color: #00800017;-fx-background-radius: 12;                                              -fx-border-color: #E0E0E0;                                              -fx-border-radius: 12;                                              -fx-border-width: 1;                                              -fx-padding: 15;">
+                                    <children>
+                                        <Label style="-fx-font-size: 20;" text="Contact Information" />
+                                        <VBox>
+                                            <children>
+                                                <Label text="Sender" />
+                                                <Label fx:id="senderPhoneLabel" style="-fx-text-fill: #6B7280;" text="Label" />
+                                            </children>
+                                        </VBox>
+                                        <VBox>
+                                            <children>
+                                                <Label text="Receiver" />
+                                                <Label fx:id="receiverPhoneLabel" style="-fx-text-fill: #6B7280;" text="Label" />
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </VBox>
+
+                                <!-- PACKAGE INFO -->
+                                <VBox spacing="10" style="-fx-background-color: #80008017;-fx-background-radius: 12;                                              -fx-border-color: #E0E0E0;                                              -fx-border-radius: 12;                                              -fx-border-width: 1;                                              -fx-padding: 15;">
+                                    <children>
+                                        <Label style="-fx-font-size: 20;" text="Package Information" />
+                                        <VBox>
+                                            <children>
+                                                <Label text="Weight" />
+                                                <Label fx:id="packageWeightLabel" style="-fx-text-fill: #6B7280;" text="Label" />
+                                            </children>
+                                        </VBox>
+                                        <VBox>
+                                            <children>
+                                                <Label text="Description" />
+                                                <Label fx:id="packageDescriptionLabel" style="-fx-text-fill: #6B7280;" text="Label" />
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </VBox>
+                        <VBox prefHeight="140.0" spacing="10.0" style="-fx-background-color: #ffff001d; -fx-background-radius: 12; -fx-border-color: #E0E0E0; -fx-border-radius: 12; -fx-border-width: 1; -fx-padding: 15;">
+                           <children>
+                              <Label style="-fx-font-size: 20;" text="Update Order Status" />
+                              <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+                                 <children>
+                                    <Label text="Current status" />
+                                    <HBox>
+                                       <children>
+                                          <HBox HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <ComboBox fx:id="statusComboBox" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="37.0" prefWidth="400.0" promptText="Select Status" HBox.hgrow="ALWAYS" />
+                                             </children>
+                                          </HBox>
+                                          <Button mnemonicParsing="false" onAction="#onUpdateStatus" style="-fx-text-fill: white; -fx-background-color: #4CAF50; -fx-font-size: 16; -fx-cursor: hand;" text="Update" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                        <HBox fx:id="successMessageBox" alignment="CENTER_LEFT" style="-fx-padding: 15; -fx-background-color: #4CAF5020; -fx-background-radius: 10;" visible="false">
+                           <children>
+                              <Label style="-fx-font-size: 18; -fx-text-fill: #2E7D32;" text="Status Updated Successfully!" />
+                           </children>
+                        </HBox>
+
+                            </children>
+                        </VBox>
+                    </children>
+                </VBox>
+
+            </content>
+        </ScrollPane>
+    </center>
+</BorderPane>
